@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style> 
+	div{
+		width: 200px;
+		height: 200px;
+		background-color: pink;
+		/*margin: 0 auto;*/  /* 原本如果用margin: 0 auto; 可以实现盒子的居中对齐，但是如果加了定位或者是浮动的盒子，这个语法就失效了，无法居中对齐；*/
+		/*float: left;*/
+		position: absolute;
+
+		/*方法是先让他向右移动50% 然后在用margin-left，负值向左移动盒子宽度的一半。垂直方向也是同理*/
+		left:50%;
+		margin-left: -100px;
+	}
+	</style>
+</head>
+<body>
+	<div></div>
+	
+</body>
+</html>

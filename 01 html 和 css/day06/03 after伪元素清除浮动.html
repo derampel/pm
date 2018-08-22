@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style> 
+	.clearfix:after {  /*只需要记住下面的内容就可以了，很多网页浏览器中有用，然后在下面需要清楚的父类盒子里面加上这个*/
+		content: "";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	.clearfix {
+		*zoom: 1;
+	}
+
+	.father{
+		border:2px solid purple;
+		width: 500px;
+	}
+	.big{
+		width: 200px;
+		height: 330px;
+		background-color: red;
+		float: left;
+	}
+	.small{
+		width: 80px;
+		height: 400px;
+		background-color: pink;
+		float: left;
+	}
+	.footer{
+		width: 600px;
+		height: 200px;
+		background-color: black;
+	}
+	</style>
+</head>
+<body>
+	<div class="father clearfix">
+		<div class="big"></div>
+		<div class="small"></div>
+
+	</div>
+	<div class="footer"></div>
+</body>
+</html>

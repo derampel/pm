@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	input {
+		outline: none; /*取消轮廓线，取消放在那里的蓝色的线*/
+		/*不同浏览器显示不一样，所以一般我们都设计一个边框颜色之类的*/
+		border:1px solid red;
+		width: 200px;
+		height: 25px;
+		background: url(images/s.png) no-repeat 180px center;
+		/*此处用上180px,是根据这个文本框的边框来的，让这个背景图片的问号不要显示的太靠右了*/
+	}
+	textarea{
+		resize: none; /*防止文本框被拖拽*/
+		outline: none;
+
+	}
+	</style>
+</head>
+<body>
+	<input type="text" name="" id="">
+	<textarea name="" id="" cols="30" rows="10"></textarea>
+</body>
+</html>

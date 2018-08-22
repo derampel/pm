@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	li{
+		width: 200px;
+		height: 30px;
+		border: 1px solid pink;
+		/*white-space: normal;  但是会叠加，堆在一起*/
+		white-space: nowrap;  /*1、强制在同一行内显示文字，不受宽度影响，正常显示*/
+		overflow: hidden; /*2、*/
+		text-overflow: ellipsis;  /*3、溢出部分文字用这几句显示最终会是“....”，123缺一不可*/
+	}
+	</style>
+</head>
+<body>
+	<li>文字显示文字内容问问我呢我嫩为觉得十分好看技术的</li>
+	<li>文字显示文字内容问问我呢我嫩为觉得十分好看技术的</li>
+	<li>文字显示文字内容问问我呢我嫩为觉得十分好看技术的</li>
+	<li>文字显示文字内容问问我呢我嫩为觉得十分好看技术的</li>
+	<li>文字显示文字内容问问我呢我嫩为觉得十分好看技术的</li>
+</body>
+</html>

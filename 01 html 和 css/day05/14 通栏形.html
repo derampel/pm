@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.top{
+		height: 80px;
+		background-color: #eee;
+		border:1px dashed #ccc;	
+		margin: 0 auto;	
+	}
+	.top .topinner{
+		height: 80px;
+		width: 900px;
+		margin: 0 auto;
+		background-color: pink;
+	}
+	.banner{
+		height: 120px;
+		width: 900px;
+		background-color: #eee;		
+		margin: 0 auto;	
+	}
+	.banner li {
+		float: left;
+		width: 222px;
+		height: 120px;
+		margin-right: 4px;
+	}
+	.one{
+		
+		background-color: yellow;
+		
+	}
+	.two{
+		
+		background-color: blue;
+		
+	}
+	.three{
+		
+		background-color: green;
+		
+	}
+	.banner .four{  /*此处加上banner 是由于 不加的话权重为1，前面 banner li 的权重为11 ，无法覆盖 所以需要加上，加上之后权重为20.*/
+		background-color: pink;
+		margin-right: 0;
+		float: right;
+	}
+
+
+
+	.main{
+		height: 500px;
+		width: 900px;
+		background-color: #eee;
+		border:1px dashed #ccc;
+		margin: 0 auto;
+	}
+	.footer{
+		height: 100px;
+		margin-top: 5px;
+		width: 900px;
+		background-color: #eee;
+		border:1px dashed #ccc;
+		margin: 0 auto;
+	}
+	
+	</style>
+</head>
+<body>
+	<div class="top">
+		<div class="topinner"></div>
+	</div>
+	<div class="banner">
+		<ul>
+			<li class="one">1</li>
+			<li class="two">2</li>
+			<li class="three">3</li>
+			<li class="four">4</li>
+		</ul>
+	</div>
+	<div class="main">main</div>
+	<div class="footer">footer</div>
+</body>
+</html>

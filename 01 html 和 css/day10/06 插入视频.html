@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 1、先上传再复制链接过来播放 -->
+	<!-- 这个直接去浏览器网页下面分享复制链接，完全粘贴就可以了 -->
+	<!-- <iframe height=498 width=510 src='http://player.youku.com/embed/XMzY3OTI1NjY1Ng==' frameborder=0 'allowfullscreen'></iframe> -->
+
+
+	<!-- 2、播放音乐得设置 -->
+	<!-- 下面这个autoplay是自动播放，而且不会停下来 -->
+	<!-- <audio src="bgsound.mp3" autoplay></audio> -->
+	<!-- 下面这个controls是默认显示播放控件的 -->
+	<!-- <audio src="bgsound.mp3" controls></audio> -->
+	<!-- 下面这个loop是默认循环的，得加上播放才能播放 -->
+	<!-- <audio src="bgsound.mp3" autoplay loop></audio> -->
+
+	<!-- 3、由于浏览器版本得问题，所以有时候只放一种格式进去不一定能被识别，所以一般通过下面方式放两种格式 -->
+	<audio controls loop>
+		<source src="bgsound.mp3"/>
+		<source src="music.ogg"/>
+		浏览器版本有问题
+	<!-- 当这两个都不能被识别时候，会出现我写的文字 -->
+	</audio>
+	
+	<video controls>
+		<source src="mp4.mp4">
+			<source src="movie04.ogg">
+	</video>
+	
+
+
+</body>
+</html>

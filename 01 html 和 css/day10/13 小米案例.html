@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div{
+		width: 632px;
+		height: 340px;
+		position: relative;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+	/*现在我们采用的办法就是当鼠标经过div时候，我们加上一个before盒子，利用浮动，将原本的div盖住，而这个before盒子只给半透明的边框，所以显示就跟加上了边框一样。但是这样给了边框以后会被挤压上去，所以我们就同时加上box-sizing来是的盒子大小不变*/
+	/*当鼠标经过的时候，我们加上before盒子*/
+	div:hover::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		border:20px solid rgba(255,255,255,0.3);
+		position: absolute;
+		top:0;
+		left:0;
+	}
+
+	</style>
+
+</head>
+<body>
+	<div>
+		<img src="mi.jpg" alt="">
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		position: absolute;  /*如果给每个盒子定义了浮动，会发现后来者居上，覆盖了之前的，显示最后一个，浮动则是被第一个覆盖*/
+	}  
+	.blue{
+		background-color: blue;
+		z-index: 1;  
+		/*只有绝对定位，相对定位，固态定位有这个属性，其它标准流，浮动，静态定位都没有。同时，越大地位越高，越容易被显示。*/
+	}
+	.green{
+		background-color: green;
+	}
+	</style>
+</head>
+<body>
+	<div class="red"></div>
+	<div class="blue"></div>
+	<div class="green"></div>
+	
+</body>
+</html>

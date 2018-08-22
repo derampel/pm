@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div{
+		width: 200px;
+		height: 500px;
+		border:2px solid #ccc;
+		float: left;  
+		/*此时会发现 没两个盒子重合的部分之间的线比其它的粗了很多，因为两个重合在一起了，所以粗了*/
+		margin-left: -1px;  /*使得每个边框往左边移动一个像素，这样就可以覆盖之前的右边框，而不是两个加在一起*/
+		position: relative;
+	}
+	div:hover{
+		border:2px solid blue;
+		z-index: 1;  /*使得被鼠标选中的边框浮在最外面，这样就显示出来了我们要的效果*/
+	}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

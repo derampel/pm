@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.top,
+	.banner,
+	.main,
+	.footer{
+		width: 900px;
+		background-color: #eee;
+		border:1px dashed #ccc;
+		margin: 0 auto;
+	}
+	.top{
+		height: 80px;
+	}
+	.banner{
+		height: 120px;
+		margin: 5px auto;
+
+	}
+	.main{
+		height: 500px;
+	}
+	.left{  /*因为父盒的宽度为900 ，此刻如果加边框，则超了两像素，所以无法在一排显示，会被挤到下面，同理，加上margin也是一样的*/
+		width: 285px;
+		height: 500px;
+		background-color: yellow;
+		float: left;
+	}
+	.right{
+		width: 600px;
+		height: 500px;
+		background-color: deeppink;
+		float: right;
+	}
+	.footer{
+		height: 100px;
+		margin-top: 5px;
+	}
+	
+	</style>
+</head>
+<body>
+	<div class="top">top</div>
+	<div class="banner">banner</div>
+	<div class="main">
+		<div class="left">left</div>
+		<div class="right">right</div>		
+	</div>
+	<div class="footer">footer</div>
+</body>
+</html>

@@ -1,0 +1,301 @@
+/*首先清楚默认的内外边距*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #fafafa;
+	/*先给body一个高度 便于在浏览器中下拉查看，之后可以删除掉*/
+	/*height: 3000px;*/
+}
+li{ /*取消列表的小点*/
+	list-style: none;
+}
+.clearfix:after {  content: ""; display: block; height: 0; clear: both; visibility: hidden;  }   
+
+.clearfix {*zoom: 1;}   /* IE6、7 专有 */
+/*导航栏结束了*/
+.header{
+	height: 100px;
+	background-color: #fff;
+}
+.inner{
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	line-height: 100px;
+}
+.logo{
+	float: left;
+}
+.nav{
+	float: right;
+}
+.nav ul {
+	overflow: hidden;
+}
+.nav li {
+	float: left;
+	margin:0 20px;
+}
+
+.nav li a{
+	color: #333;
+	text-decoration: none;
+}
+.nav li a:hover {
+	color: #2288f6;
+}
+
+/*banner start*/
+.banner {
+	height: 620px;
+	background: url(../images/banner.jpg) no-repeat top center;
+	/*position: relative;*/
+}
+.box ul {		
+	/*position: absolute;	*/
+	bottom:20px;
+	left: 50%;
+	margin-left: -35px;
+}
+.box li {
+	width: 12px;
+	height: 12px;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 50%;
+	float: left;
+	margin: 5px;
+}
+.box ul li:hover{
+	background-color: rgba(255,255,255,0);
+	border:1px solid white;
+}
+
+
+
+/*开始主体部分*/
+.service{
+	width: 1055px;
+
+	margin:  75px auto 0 ;	
+
+}
+.service-hd{
+	margin-top: 40px;
+	border-top: 1px solid #ccc;
+}
+.service-hd h4 {
+	width: 167px;
+	height: 46px;
+	margin:  -10px auto 0;	
+}
+.service-hd p{
+	font-size: 13px;
+	text-align: center;
+	color: #7f7f7f;
+	width: 830px;
+	line-height: 25px;
+	margin: 15px auto 0;			
+}
+
+.service-bd {
+	margin-top: 40px;
+	overflow: hidden;
+}
+.service-bd li {
+	width: 320px;
+	height: 510px;
+	background-color: #ffffff;
+	float: left;
+	border:1px solid #e7e8e9;
+}
+.service-bd img {
+	margin: 45px 35px;
+	width: 248px;
+	height: 130px;
+}
+.service-bd h4 {
+	height: 35px;
+	font-size: 24px;
+	text-align: center;
+	color: #333333;
+}
+.service-bd p {
+	width: 230px;
+	height: 140px;
+	line-height: 32px;
+	color:#989898;
+	font-size: 12px;
+	margin: 0 auto;
+}
+.service-bd a {
+	display: inline-block;
+	width: 148px;
+	height: 38px;
+	border:1px solid #ff9412;
+	text-align: center;
+	line-height: 38px;
+	text-decoration: none;
+	margin: 20px 85px 0 ;
+	border-radius: 5px;
+	color: #ff9412;
+}
+
+.service-bd a:hover {
+	color: #ffffff;
+	background-color: #ff9412;
+}
+/*div.pic {
+	width: 238px;
+	height: 140px;
+	margin: 45px 35px;
+}*/
+.marketing {
+	margin: 0 42px;
+}
+.case {
+	height: 325px;
+	background-color: #fff;
+	margin :65px 0;
+/*	padding-top:75px; */
+
+}
+.case h4 {
+	border-top: 1px solid #cccccc;
+	width: 1000px;
+	height: 60px;
+	margin:0 auto;
+	text-align: center
+}
+.case h4 img {
+	margin-top: -12px;	
+}
+
+.case-bd {
+	width: 1050px;
+	position: relative;
+	margin:0 auto;
+}
+
+
+.case-bd li {
+	width: 323px;
+	height: 212px;
+	background-color: pink;
+	float: left;
+	position:relative;
+}
+
+.middle {
+	margin:0 40px;
+}
+
+.text {
+	width: 100%;
+	height: 45px;
+	background: rgba(0,0,0,0.3);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+	font-size: 14px;
+}
+
+.mask {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0, 0.5) url(../images/fdj.png) no-repeat center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.case-bd li:hover .mask {	
+	display: block;
+}
+.case-bd li:hover .text {	
+	display: none;
+}
+
+.left, .right {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	text-align: center;
+	line-height: 60px;
+	text-decoration: none;
+	color: #fff;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 50%;
+	font-size:30px;
+	font-weight: 700;
+	top:50%;
+	margin-top: -30px;
+	
+
+}
+.left{
+	left: -90px;
+}
+.right{
+	right: -90px;
+}
+
+.case-bd a:hover {
+	background-color: rgba(0,0,0,0.4);
+}
+/*2、在给ul一个父类盒子 比ul小一点，然后超出部分隐藏调就可以了*/
+.hz-box {
+	width: 1040px;
+/*	height: 240px;*/
+	overflow: hidden;
+	margin: 40px 0 80px;
+}
+
+.hz-box ul {
+	width: 1060px;
+}
+/*1、先给li的父类盒子ul 一个宽度，防止li掉下去到下一层*/
+.hz-box li {
+	width: 208px;
+	height: 63px;
+	border-right: 1px dashed #ccc;
+	border-bottom: 1px dashed #ccc;
+	float: left;
+	padding-top: 20px;
+	text-align: center;
+}
+.footer {
+	height: 170px;
+	width: 100%;
+	background-color: #212425;
+	overflow: hidden; /* 防止底部上面两个塌陷，如果不加，则subnav没法用margin-top来做*/
+}
+
+.subnav {
+	text-align: center;
+	color: #fff;
+	font-size: 19px;
+	margin-top :40px;
+}
+.subnav a {
+	color: #fff;
+	font-size: 19px;
+	text-decoration: none;
+	padding-right: 5px;
+}
+
+.subnav a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+.bottom-text {
+	color: #676767;
+	font-size: 14px;
+	text-align: center;	
+	margin-top: 20px;
+}
